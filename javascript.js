@@ -230,14 +230,14 @@ function update() {
 		// walls, run gameOver() function
 		if(ball.y + ball.r > H) {
 			ball.y = H - ball.r;
-		   	var snd = new Audio("sounds/punch.wav");
+		   	var snd = new Audio("punch.wav");
          	snd.play();
 			gameOver();
 		} 
 		
 		else if(ball.y < 0) {
 			ball.y = ball.r;
-			var snd = new Audio("sounds/punch.wav");
+			var snd = new Audio("punch.wav");
          	snd.play();
 			gameOver();
 		}
@@ -248,7 +248,7 @@ function update() {
 			ball.vx = -ball.vx;
 			ball.x = W - ball.r;
 
-			var snd = new Audio("sounds/wall.mp3");
+			var snd = new Audio("wall.mp3");
          	snd.play();
 		}
 		
@@ -256,7 +256,7 @@ function update() {
 			ball.vx = -ball.vx;
 			ball.x = ball.r;
 
-			var snd = new Audio("sounds/wall.mp3");
+			var snd = new Audio("wall.mp3");
          	snd.play();
 		}
 	}
@@ -304,7 +304,7 @@ function collideAction(ball, p) {
 		particlePos.y = ball.y + ball.r;
 		multiplier = -1;
 
-		var snd = new Audio("sounds/ding.wav");
+		var snd = new Audio("ding.wav");
          	snd.play();	
 	}
 	
@@ -313,7 +313,7 @@ function collideAction(ball, p) {
 		particlePos.y = ball.y - ball.r;
 		multiplier = 1;	
 
-		var snd = new Audio("sounds/ding.wav");
+		var snd = new Audio("ding.wav");
          	snd.play();	
 
 	}
